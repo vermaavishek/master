@@ -9,8 +9,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'ls -lrt > Output.txt'
-                sh 'echo ${envVar1}'
-                echo "${env.BRANCH_NAME}"
             }
         }
         stage('Test') { 
