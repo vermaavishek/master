@@ -1,1 +1,1 @@
-print "This message is triggered from GIT"
+print ("This message is triggered from GIT")
