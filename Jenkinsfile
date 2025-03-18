@@ -1,8 +1,8 @@
 pipeline {
     environment{
-        envVar1 = "environment variable1"
-        envVar2 = "environment variable2"
-        envVar3 = "environment variable3"
+        envVar1 = "Branch Name"
+        envVar2 = "Job URL"
+        envVar3 = "Build Number"
     }
     agent any 
     stages {
@@ -15,7 +15,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh 'echo ${envVar2}'
-                echo "${env.WORKSPACE}"
+                echo "${env.JOB_URL}"
             }
         }
         stage('Deploy') { 
