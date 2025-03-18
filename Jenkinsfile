@@ -13,7 +13,7 @@ pipeline{
               }
               stage ("deploy"){
                               step{
-                                  echo "I am in deployment"
+                                  echo "I am in deployment."
                               }
               }            
         }
