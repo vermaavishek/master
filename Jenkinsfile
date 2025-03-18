@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'ls -lrt > Output.txt'
+                sh 'python3 print.py > Out.txt'
             }
         }
         stage('Test') { 
