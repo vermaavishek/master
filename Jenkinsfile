@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'ls -lrt > Output.txt'
                 sh 'python3 print.py > Out.txt'
+                archiveArtifacts allowEmptyArchive: true, artifacts: '*.txt', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
             }
         }
         stage('Test') { 
